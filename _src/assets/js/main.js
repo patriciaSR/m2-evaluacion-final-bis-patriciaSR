@@ -8,10 +8,21 @@ const cardList = document.querySelector('.card__list');
 const ENDPOINT = 'https://raw.githubusercontent.com/Adalab/cards-data/master/';
 
 startButton.addEventListener('click', startGame);
+setDefaultNumber(localStorage.getItem('cardNumber'));
+
+function setDefaultNumber(number) {
+  const radios = document.querySelectorAll('input[type="radio"]');
+  for (const radio of radios) {
+    if(number === radio.value) {
+      radio.checked = true;
+    }
+  }
+}
 
 function startGame() {
   event.preventDefault();
   const inputSelect = document.querySelector('input:checked');
+  localStorage.setItem('cardNumber', inputSelect.value);
   getCards(inputSelect.value);
 }
 
