@@ -42,5 +42,14 @@ function printCard(pair, image, name) {
 
   newLi.appendChild(newFrontImage);
   newLi.appendChild(backImage);
+
+  newLi.addEventListener('click', flip);
+
   cardList.appendChild(newLi);
+}
+
+function flip(event) {
+  const eventLi = event.currentTarget;
+  const eventImg = eventLi.querySelector('.card__front-img');
+  eventImg.classList.toggle('card--flipped');
 }

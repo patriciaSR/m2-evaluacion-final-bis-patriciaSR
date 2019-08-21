@@ -30,3 +30,8 @@ body {
   height: 100%;
   border-radius: 10px;
 }
+
+.card__front-img.card--flipped {
+  z-index: 1;
+  background-color: white;
+}
