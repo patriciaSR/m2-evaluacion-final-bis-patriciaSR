@@ -1,6 +1,7 @@
 # Ejercicio de evaluacuón final-bis-El juego de las parejas
 
 El ejercicio consiste en desarrollar una aplicación web que simula un juego de buscar las parejas.
+![El juego de las parejas](_src/assets/images/captura.png)
 
 ## 1. Maquetación
 La aplicación consta de dos partes
